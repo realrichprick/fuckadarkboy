@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMS | @MEMBERS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-weight: 100;
+            background-color: #000000;
+            font-family: "Lucida Console", "Courier New", monospace;
+            padding-bottom: 35px;
+        }
+  
+        body a {
+            color: rgba(170, 170, 170, 0.493);
+            text-decoration: none;
+            font-weight: bold;
+        }
+  
+        #main-container {
+            margin: 0 auto;
+            color: white;
+        }
+  
+        .ascii {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 12px;
+            text-align: center;
+            padding: 25px;
+            padding-top: 35px;
+            animation: textShadow 1.6s infinite;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+  
+        #navbar-container {
+            margin-bottom: 0px;
+        }
+  
+        .nav {
+            text-align: center;
+            margin-top: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+            margin-bottom: 0px;
+            margin-left: 0;
+        }
+  
+        .nav li {
+            display: inline-block;
+            padding-right: 10px;
+        }
+  
+        .nav li a {
+            text-decoration: none;
+            color: rgba(170, 170, 170, 0.493);
+            transition: all 0.3s ease-out;
+        }
+  
+        .nav li a:hover {
+            color: rgba(218, 218, 218, 0.493);
+            transition: all;
+        }
+  
+        .nav .selected {
+            border-bottom: solid 2px rgb(0, 4, 255);
+            padding-bottom: 3px;
+        }
+
+        .box {
+            text-align: center;
+        }
+  
+        #navbar-scrolling {
+            background-color: var(--alt-bg);
+            margin-bottom: 10px;
+            border-top: var(--main-bg) solid 2px;
+        }
+
+        .mon {
+            display: inline-block;
+            max-width: 100%;
+            overflow: hidden;
+            font-size: 13px;
+            position: relative;
+            left: 740px;
+            padding: 0;
+            line-height: 1.5;
+            position: relative;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            width: 500px;
+        }
+
+        @keyframes meow {
+            0% {
+                -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+            }
+            100% {
+                -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
+
+        .scroll {
+            display: inline-block;
+            position: relative;
+            transform: translateX(100%);
+            animation: meow 18s linear -4.00s infinite;
+        }
+
+        .bottom {
+            text-align: center;
+            line-height: 12px;
+        }
+
+        .bottom a {
+            text-align: center;
+            width: 15px;
+            color: rgb(0, 17, 255);
+        }
+
+        #popup {
+            display: none; 
+            position: fixed; 
+            left: 50%; 
+            top: 50%; 
+            transform: translate(-50%, -50%); 
+            color: #fff; 
+            padding: 20px;
+            border-radius: 8px; 
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+            text-align: center; 
+            width: 300px; 
+            z-index: 1000; 
+        }
+
+        #popup img {
+            width: 120px; 
+            border-radius: 50%; 
+        }
+
+        #popup span {
+            display: block; 
+            margin: 10px 0; 
+        }
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <pre class="ascii">
+                                                    
+                                            
+ ███▄    █  ███▄ ▄███▓  ██████ 
+ ██ ▀█   █ ▓██▒▀█▀ ██▒▒██    ▒ 
+▓██  ▀█ ██▒▓██    ▓██░░ ▓██▄   
+▓██▒  ▐▌██▒▒██    ▒██   ▒   ██▒
+▒██░   ▓██░▒██▒   ░██▒▒██████▒▒
+░ ▒░   ▒ ▒ ░ ▒░   ░  ░▒ ▒▓▒ ▒ ░
+░ ░░   ░ ▒░░  ░      ░░ ░▒  ░ ░
+   ░   ░ ░ ░      ░   ░  ░  ░  
+         ░        ░         ░ 
+
+        </pre>
+        <div id="navbar-container" style="display: block;">
+            <ul class="nav">
+                <li><a href="https://nms.lol">home</a></li>
+                <li><a href="./members" class="selected">members</a></li>
+            </ul>
+            <div id="navbar-scrolling">
+                <p class="mon">
+                    <span class="scroll">
+                        No excuses acceptable, inhabited by the Gods | NMS |
+                    </span>
+                    <span></span>
+                </p>  
+            </div>
+        </div>
+        <div class="box">
+            <ul class="nav">
+                <li><a href="#" id="Witness">Witness</a></li>
+                <li><a href="#" id="Rifle">Rifle</a></li>
+                <li><a href="#" id="Discrete">Discrete</a></li>
+                <li><a href="#" id="Hapy">Hapy</a></li>
+                <li><a href="#" id="Fate">Fate</a></li>
+            </ul>
+            <div id="popup">
+                <img src="" alt="" id="pfp">
+                <span id="description"></span>
+                <span id="playing"></span>
+                <audio id="audio" src="" autoplay></audio>
+            </div>
+        </div>
+    </div>
+        
+<script>
+    document.getElementById("Witness").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("pfp").src = "https://files.catbox.moe/3k6p41.jpg";
+        document.getElementById("description").innerHTML = "AETF Owner";
+        document.getElementById("playing").innerHTML = "PLAYING - Bitter Sweet";
+        document.getElementById("audio").src = "https://files.catbox.moe/nwbnsx.mp3";
+    });
+    
+    document.getElementById("Rifle").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("pfp").src = "https://files.catbox.moe/q21swf.png";
+        document.getElementById("description").innerHTML = "Fantasy of Love";
+        document.getElementById("playing").innerHTML = "PLAYING - Love Potions";
+        document.getElementById("audio").src = "https://files.catbox.moe/ur5th5.mp3";
+    });
+    
+    document.getElementById("Discrete").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("pfp").src = "https://files.catbox.moe/ksi7p5.jpg";
+        document.getElementById("description").innerHTML = "Cyber Enthusiast";
+        document.getElementById("playing").innerHTML = "PLAYING - Creep";
+        document.getElementById("audio").src = "https://files.catbox.moe/o87f5d.mp3";
+    });
+    
+    document.getElementById("Hapy").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("pfp").src = "https://files.catbox.moe/i8anqv.jpg";
+        document.getElementById("description").innerHTML = "BISHOPS + AETF";
+        document.getElementById("playing").innerHTML = "bro listens to shitty music";
+    });
+    
+    document.getElementById("Fate").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("pfp").src = "https://files.catbox.moe/92a5rt.png";
+        document.getElementById("description").innerHTML = "ultimate tard";
+        document.getElementById("playing").innerHTML = "Bro doesn't listen to music";
+    });
+
+    window.addEventListener("click", function(event) {
+        if (event.target === document.getElementById("popup")) {
+            document.getElementById("popup").style.display = "none";
+        }
+    });
+</script>
+
+    </div>
+</body>
+</html>
