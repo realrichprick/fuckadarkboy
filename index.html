@@ -156,6 +156,8 @@ hr {
 }
     </style>
 </body>
+<audio id="audio" src="14.mp3" loop></audio>
+<div id="overlay">
 </html>
 
 <div id="main-container">
@@ -211,6 +213,19 @@ hr {
     </p>
 </div>
 </div>
+    });
+    });
 
-<body>
-<html>
+    function checkDevice() {
+      if (window.innerWidth < 1024) {
+        document.getElementById('mobile-overlay').style.display = 'flex';
+      } else {
+        document.getElementById('mobile-overlay').style.display = 'none';
+      }
+    }
+
+    window.onload = checkDevice;
+    window.onresize = checkDevice;
+  </script>
+</body>
+</html>
