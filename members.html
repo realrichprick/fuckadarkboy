@@ -194,6 +194,7 @@
                 <li><a href="#" id="Discrete">Discrete</a></li>
                 <li><a href="#" id="Hapy">Hapy</a></li>
                 <li><a href="#" id="Fate">Fate</a></li>
+                <li><a href="#" id="GST">GST</a></li>
             </ul>
             <div id="popup">
                 <img src="" alt="" id="pfp">
@@ -242,6 +243,14 @@
         document.getElementById("description").innerHTML = "Sigma boss";
         document.getElementById("playing").innerHTML = "PLAYING - Lovers Rock";
         document.getElementById("audio").src = "https://files.catbox.moe/c0ygm7.mp3";
+    });
+
+        document.getElementById("GST").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("pfp").src = "https://files.catbox.moe/gmamdy.png";
+        document.getElementById("description").innerHTML = "backdooring your mother";
+        document.getElementById("playing").innerHTML = "PLAYING - Burgundy";
+        document.getElementById("audio").src = "https://files.catbox.moe/wpk4eb.mp3";
     });
 
     window.addEventListener("click", function(event) {
